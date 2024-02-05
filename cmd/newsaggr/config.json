@@ -1,0 +1,13 @@
+{
+   "rss":[
+      "https://habr.com/ru/rss/hub/go/all/?fl=ru",
+      "https://www.botreetechnologies.com/blog/feed/",
+      "https://news.un.org/feed/subscribe/ru/news/topic/economic-development/feed/rss.xml",
+      "https://cprss.s3.amazonaws.com/golangweekly.com.xml",
+      "https://davidwalsh.name/feed",
+      "https://theonetechnologies.com/blog/feed/rss/",
+      "https://business-software.in/feed/"
+   ],
+   "http_port": 80,
+   "request_period": 1
+}
