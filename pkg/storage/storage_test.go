@@ -2,14 +2,16 @@ package storage
 
 import (
 	"math/rand"
+	"os"
 	"strconv"
 	"testing"
 	"time"
 )
 
-const connstr = "postgresql://[userspec@][hostspec][/dbname][?paramspec]"
+//const connstr = "postgresql://postgres@172.31.201.29/postgres"
 
 func TestNew(t *testing.T) {
+	connstr := os.Getenv("newsdb")
 	_, err := New(connstr)
 	if err != nil {
 		t.Fatal(err)
@@ -17,6 +19,7 @@ func TestNew(t *testing.T) {
 }
 
 func TestDB_News(t *testing.T) {
+	connstr := os.Getenv("newsdb")
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	posts := []Post{
